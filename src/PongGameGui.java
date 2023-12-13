@@ -68,21 +68,6 @@ public class PongGameGui extends JFrame {
     // Create a DocumentFilter to restrict input to numbers and letters
     private DocumentFilter createDocumentFilter() {
         return new DocumentFilter() {
-            @Override
-            public void insertString(DocumentFilter.FilterBypass fb, int offset, String text, AttributeSet attr)
-                    throws BadLocationException {
-                if (isValidText(text)) {
-                    super.insertString(fb, offset, text, attr);
-                }
-            }
-
-            @Override
-            public void replace(DocumentFilter.FilterBypass fb, int offset, int length, String text, AttributeSet attrs)
-                    throws BadLocationException {
-                if (isValidText(text)) {
-                    super.replace(fb, offset, length, text, attrs);
-                }
-            }
 
             private boolean isValidText(String text) {
                 return text.matches("[a-zA-Z0-9]+");
