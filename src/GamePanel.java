@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class GamePanel extends JPanel implements Runnable{
     static final int GAME_WIDTH = 1000;
@@ -133,7 +134,7 @@ public class GamePanel extends JPanel implements Runnable{
         // Check if either player has reached the goal score
         if (score.player1 == Score.GOAL_SCORE || score.player2 == Score.GOAL_SCORE) {
             // Print the winner and terminate the program
-            System.out.println("Game Over! Player " + (score.player1 == Score.GOAL_SCORE ? "1" : "2") + " wins!");
+            JOptionPane.showMessageDialog(null, "Game Over! Player " + (score.player1 == Score.GOAL_SCORE ? "1" : "2") + " wins!");
             System.exit(0);
         }
     }

@@ -27,7 +27,7 @@ public class Score extends Rectangle {
         // Set a smaller font size for drawing the high score
         g.setFont(new Font("Century Gothic", Font.PLAIN, 20));
         // Draw the high score at the top left corner of the game area
-        g.drawString("High Score: " + highScore, 20, 30); // Display the high score
+        g.drawString("10 : " + highScore, 20, 30); // Display the high score
     }
 
     // Update the high score if needed
